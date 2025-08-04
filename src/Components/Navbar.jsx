@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./../images/SAMC.jpg";
+import logo from "./../images/samc.png";
 
 const Navbar = ({ onNavClick }) => {
   return (
@@ -7,7 +7,7 @@ const Navbar = ({ onNavClick }) => {
       <div className="container mx-auto px-6 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 rounded-lg bg-gray-800 border border-gray-700 overflow-hidden flex items-center justify-center">
+          <div className="w-21 h-12 bg-black rounded-lg  overflow-hidden flex items-center justify-center">
             <img
               src={logo}
               alt="Logo"

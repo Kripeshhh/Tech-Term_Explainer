@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { InfoAll } from "../InfoStorage/Information";
 
-const Main = () => {
+const Main = ({ techTerm }) => {
   const [query, setQuery] = useState("");
   const [expandedItems, setExpandedItems] = useState([]);
+
+  useEffect(() => {
+    if (techTerm) {
+      setQuery(techTerm);
+    }
+  }, [techTerm]);
 
   const filteredData = InfoAll.filter((item) =>
     item.Term.toLowerCase().includes(query.toLowerCase())

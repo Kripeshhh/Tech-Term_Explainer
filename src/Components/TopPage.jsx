@@ -101,7 +101,7 @@ const trendyTerms = [
   "Quantum Computing",
 ];
 
-const TopPage = () => {
+const TopPage = ({ termclick }) => {
   const [page, setPage] = useState(null);
 
   return (
@@ -114,6 +114,9 @@ const TopPage = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-amber-400 text-3xl font-bold mb-8">
               All Tech Terms
+              <h6 className="text-[12px] text-gray-500 mt-2">
+                Try clicking one ?
+              </h6>
             </h2>
             <div
               className="flex flex-wrap justify-center gap-3"
@@ -130,6 +133,9 @@ const TopPage = () => {
                   style={{
                     whiteSpace: "nowrap",
                     userSelect: "none",
+                  }}
+                  onClick={() => {
+                    termclick(term);
                   }}
                 >
                   {term}
@@ -161,6 +167,9 @@ const TopPage = () => {
                     whiteSpace: "nowrap",
                     userSelect: "none",
                   }}
+                  onClick={() => {
+                    termclick(term);
+                  }}
                 >
                   {term}
                 </div>
@@ -184,12 +193,6 @@ const TopPage = () => {
             </div>
           </div>
         )}
-      </div>
-
-      {/* Decorative lines at the bottom */}
-      <div className="pb-10 flex flex-col items-center space-y-3">
-        <div className="w-[900px] h-px bg-gray-500 "></div>
-        <div className="w-[750px] h-px bg-gray-500"></div>
       </div>
 
       {/* Animation style */}

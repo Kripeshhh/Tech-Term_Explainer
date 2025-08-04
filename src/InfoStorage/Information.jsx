@@ -1099,18 +1099,300 @@ export const InfoAll = [
       "dApps rely on peer-to-peer networks, making them resistant to censorship.",
   },
   {
-    Term: "Quantum Computing",
+    Term: "Internet of Things (IoT)",
     Explanation:
-      "A new type of computing using quantum bits that can represent multiple states at once, enabling faster problem solving.",
+      "A network of everyday devices connected to the internet that collect and share data.",
     KeyUses: [
-      "Breaking complex encryption",
-      "Simulating molecules for drug discovery",
-      "Optimizing large systems",
-      "Advancing AI research",
+      "Smart home automation",
+      "Health monitoring with wearables",
+      "Industrial equipment tracking",
+      "Smart city infrastructure",
     ],
     RealWorldExample:
-      "Google claimed quantum supremacy by solving a problem faster than a supercomputer.",
+      "Smart thermostats that adjust your home temperature based on your habits.",
     QuickFact:
-      "Quantum computers are still experimental and not widely available.",
+      "By 2025, it's estimated there will be over 75 billion IoT devices worldwide.",
+  },
+  {
+    Term: "Cybersecurity",
+    Explanation:
+      "Protecting computers, networks, and data from unauthorized access or attacks.",
+    KeyUses: [
+      "Preventing data breaches",
+      "Securing online transactions",
+      "Protecting personal information",
+      "Safeguarding company networks",
+    ],
+    RealWorldExample:
+      "Using firewalls and antivirus software to keep your computer safe from hackers.",
+    QuickFact:
+      "Cybercrime damages are expected to cost the world $10.5 trillion annually by 2025.",
+  },
+  {
+    Term: "Data Structure",
+    Explanation:
+      "A way to organize and store data efficiently for easy access and modification.",
+    KeyUses: [
+      "Managing data in software applications",
+      "Optimizing search and sort operations",
+      "Implementing algorithms",
+      "Storing data in databases",
+    ],
+    RealWorldExample:
+      "Arrays and linked lists help apps store and process user data quickly.",
+    QuickFact:
+      "Choosing the right data structure can drastically improve program speed and memory use.",
+  },
+  {
+    Term: "Containerization",
+    Explanation:
+      "Packaging software with everything it needs to run, so it works consistently across environments.",
+    KeyUses: [
+      "Simplifying app deployment",
+      "Isolating applications for security",
+      "Scaling services easily",
+      "Enabling consistent development and testing",
+    ],
+    RealWorldExample:
+      "Docker containers let developers run the same app on their laptop and in the cloud without changes.",
+    QuickFact:
+      "Containers are lighter than virtual machines because they share the host system’s OS.",
+  },
+  {
+    Term: "DevOps",
+    Explanation:
+      "A set of practices that combines software development and IT operations to deliver apps faster and more reliably.",
+    KeyUses: [
+      "Automating software deployment",
+      "Improving collaboration between teams",
+      "Monitoring and maintaining applications",
+      "Accelerating release cycles",
+    ],
+    RealWorldExample:
+      "Teams use tools like Jenkins and Kubernetes to continuously build and deploy software updates.",
+    QuickFact:
+      "DevOps helps companies release new features multiple times a day instead of months.",
+  },
+  {
+    Term: "Progressive Web App (PWA)",
+    Explanation:
+      "A web app that works like a native app with offline access, fast loading, and push notifications.",
+    KeyUses: [
+      "Providing app-like experience on browsers",
+      "Working offline or on poor networks",
+      "Sending push notifications",
+      "Easier installation without app stores",
+    ],
+    RealWorldExample:
+      "Twitter Lite is a PWA that loads quickly and works offline on mobile devices.",
+    QuickFact:
+      "PWAs combine the best of web and mobile apps without needing app store approval.",
+  },
+  {
+    Term: "SaaS (Software as a Service)",
+    Explanation:
+      "Software delivered over the internet that users can access via a browser without installing.",
+    KeyUses: [
+      "Accessing apps from any device",
+      "Automatic updates and maintenance",
+      "Reducing IT costs for businesses",
+      "Collaborating online in real time",
+    ],
+    RealWorldExample:
+      "Google Workspace offers email, docs, and storage entirely online.",
+    QuickFact:
+      "SaaS eliminates the need for complex installations or hardware management.",
+  },
+  {
+    Term: "Virtual Machine (VM)",
+    Explanation:
+      "Software that emulates a computer, allowing multiple operating systems to run on one physical machine.",
+    KeyUses: [
+      "Running different OS on one device",
+      "Testing software safely",
+      "Isolating applications",
+      "Optimizing server use",
+    ],
+    RealWorldExample:
+      "Developers use VMs to run Windows on a Mac without rebooting.",
+    QuickFact:
+      "VMs share the host computer's hardware but act like separate machines.",
+  },
+  {
+    Term: "Microservices",
+    Explanation:
+      "An architectural style that breaks applications into small, independent services that communicate over networks.",
+    KeyUses: [
+      "Building scalable applications",
+      "Enabling independent development",
+      "Simplifying maintenance",
+      "Improving fault isolation",
+    ],
+    RealWorldExample:
+      "Netflix uses microservices to manage video streaming, user accounts, and recommendations separately.",
+    QuickFact:
+      "Microservices let teams deploy updates faster without affecting the whole system.",
+  },
+  {
+    Term: "Agile Methodology",
+    Explanation:
+      "A flexible approach to software development that promotes iterative progress and collaboration.",
+    KeyUses: [
+      "Delivering software in small, usable parts",
+      "Adapting to changing requirements",
+      "Improving team communication",
+      "Increasing customer involvement",
+    ],
+    RealWorldExample:
+      "Teams hold regular sprints and daily standups to continuously improve and deliver features.",
+    QuickFact:
+      "Agile replaced traditional, rigid methods like Waterfall for faster and more flexible development.",
+  },
+  {
+    Term: "CSS Grid",
+    Explanation:
+      "A powerful layout system for creating complex, responsive web designs using rows and columns.",
+    KeyUses: [
+      "Designing web page layouts",
+      "Creating responsive designs",
+      "Aligning elements precisely",
+      "Building grid-based interfaces",
+    ],
+    RealWorldExample:
+      "Using CSS Grid to create a photo gallery that adjusts columns based on screen size.",
+    QuickFact: "CSS Grid works alongside Flexbox for modern, flexible layouts.",
+  },
+  {
+    Term: "JavaScript Promises",
+    Explanation:
+      "Objects that represent the eventual completion or failure of asynchronous operations.",
+    KeyUses: [
+      "Handling asynchronous tasks",
+      "Managing API calls",
+      "Avoiding callback hell",
+      "Improving code readability",
+    ],
+    RealWorldExample:
+      "Fetching data from a server and processing it once the response arrives.",
+    QuickFact: "Promises have three states: pending, fulfilled, and rejected.",
+  },
+  {
+    Term: "Event Loop",
+    Explanation:
+      "A mechanism that lets JavaScript handle multiple tasks by managing asynchronous operations.",
+    KeyUses: [
+      "Running non-blocking code",
+      "Handling user interactions",
+      "Managing timers and API calls",
+      "Executing callback functions",
+    ],
+    RealWorldExample:
+      "Updating a webpage while waiting for data to load without freezing the UI.",
+    QuickFact:
+      "The event loop constantly checks the call stack and task queue to keep code running smoothly.",
+  },
+  {
+    Term: "GraphQL",
+    Explanation:
+      "A query language for APIs that lets clients request exactly the data they need.",
+    KeyUses: [
+      "Reducing over-fetching of data",
+      "Simplifying API requests",
+      "Combining multiple data sources",
+      "Improving app performance",
+    ],
+    RealWorldExample:
+      "Facebook uses GraphQL to fetch only necessary user data in its apps.",
+    QuickFact:
+      "GraphQL lets clients shape responses, unlike traditional REST APIs.",
+  },
+  {
+    Term: "Web Assembly (Wasm)",
+    Explanation:
+      "A low-level code format that runs in browsers to deliver near-native performance for web apps.",
+    KeyUses: [
+      "Running heavy computations in the browser",
+      "Porting games and apps to the web",
+      "Improving speed of web applications",
+      "Enabling languages other than JavaScript on the web",
+    ],
+    RealWorldExample:
+      "Figma uses WebAssembly to power its complex design editor in the browser.",
+    QuickFact:
+      "Wasm is supported by all major browsers and complements JavaScript.",
+  },
+  {
+    Term: "OAuth",
+    Explanation:
+      "An authorization protocol that lets apps access your info without sharing your password.",
+    KeyUses: [
+      "Logging in via Google or Facebook",
+      "Granting app permissions safely",
+      "Allowing third-party integrations",
+      "Controlling access scopes",
+    ],
+    RealWorldExample:
+      "When you sign in to a website using your Google account, OAuth handles the access securely.",
+    QuickFact:
+      "OAuth improves security by limiting what apps can do with your data.",
+  },
+  {
+    Term: "JSON",
+    Explanation:
+      "A lightweight format for storing and exchanging data, easy for humans and machines to read.",
+    KeyUses: [
+      "Data transfer between servers and web apps",
+      "Configuring applications",
+      "Storing structured data",
+      "APIs communication",
+    ],
+    RealWorldExample: "APIs often send data as JSON for web apps to display.",
+    QuickFact:
+      "JSON stands for JavaScript Object Notation but is language-independent.",
+  },
+  {
+    Term: "WebSocket",
+    Explanation:
+      "A protocol for real-time, two-way communication between a browser and server.",
+    KeyUses: [
+      "Live chat apps",
+      "Real-time gaming",
+      "Stock market updates",
+      "Collaborative editing tools",
+    ],
+    RealWorldExample:
+      "Slack uses WebSockets to update messages instantly without refreshing.",
+    QuickFact:
+      "WebSocket keeps the connection open, unlike regular HTTP requests.",
+  },
+  {
+    Term: "CDN (Content Delivery Network)",
+    Explanation:
+      "A network of servers worldwide that delivers web content faster by caching it closer to users.",
+    KeyUses: [
+      "Speeding up website loading",
+      "Reducing server load",
+      "Improving availability",
+      "Protecting against traffic spikes",
+    ],
+    RealWorldExample:
+      "Netflix uses CDNs to stream videos quickly to viewers globally.",
+    QuickFact:
+      "CDNs can reduce latency by serving content from the nearest server.",
+  },
+  {
+    Term: "WebAssembly (Wasm)",
+    Explanation:
+      "A low-level code format that runs in browsers to deliver near-native performance for web apps.",
+    KeyUses: [
+      "Running heavy computations in the browser",
+      "Porting games and apps to the web",
+      "Improving speed of web applications",
+      "Enabling languages other than JavaScript on the web",
+    ],
+    RealWorldExample:
+      "Figma uses WebAssembly to power its complex design editor in the browser.",
+    QuickFact:
+      "Wasm is supported by all major browsers and complements JavaScript.",
   },
 ];
