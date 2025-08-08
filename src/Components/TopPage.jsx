@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "./Navbar";
 
-// Main list for "Term Lists"
 const techTerms = [
   "HTML",
   "CSS",
@@ -79,7 +78,6 @@ const techTerms = [
   "Quantum Computing",
 ];
 
-// Subset list for "Trending Topics"
 const trendyTerms = [
   "Artificial Intelligence (AI)",
   "Machine Learning (ML)",
@@ -103,12 +101,27 @@ const trendyTerms = [
 
 const TopPage = ({ termclick }) => {
   const [page, setPage] = useState(null);
+  const contentRef = useRef(null);
+
+  // Function to handle click + scroll
+  const handleTermClick = (term) => {
+    termclick(term);
+    if (contentRef.current) {
+      window.scrollTo({
+        top: contentRef.current.offsetTop + 550, // scroll just above the content
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <Navbar onNavClick={setPage} />
 
-      <div className="flex flex-col items-center justify-center flex-grow px-4 py-12 text-center">
+      <div
+        ref={contentRef}
+        className="flex flex-col items-center justify-center flex-grow px-4 py-12 text-center"
+      >
         {/* Term List Page */}
         {page === "hi" && (
           <div className="max-w-5xl mx-auto">
@@ -129,14 +142,12 @@ const TopPage = ({ termclick }) => {
               {techTerms.map((term, idx) => (
                 <div
                   key={idx}
-                  className="px-3 py-1 bg-gray-800 rounded-md border border-gray-700 hover:bg-gray-700 transition-colors cursor-default"
+                  className="px-3 py-1 bg-gray-800 rounded-md border border-gray-700 hover:bg-gray-700 transition-colors cursor-pointer"
                   style={{
                     whiteSpace: "nowrap",
                     userSelect: "none",
                   }}
-                  onClick={() => {
-                    termclick(term);
-                  }}
+                  onClick={() => handleTermClick(term)}
                 >
                   {term}
                 </div>
@@ -149,7 +160,7 @@ const TopPage = ({ termclick }) => {
         {page === "bye" && (
           <div className="max-w-5xl mx-auto">
             <h2 className="text-amber-400 text-3xl font-bold mb-8">
-              Trending Topics
+              Trendy Terms
             </h2>
             <div
               className="flex flex-wrap justify-center gap-3"
@@ -162,14 +173,12 @@ const TopPage = ({ termclick }) => {
               {trendyTerms.map((term, idx) => (
                 <div
                   key={idx}
-                  className="px-3 py-1 bg-gray-800 rounded-md border border-gray-700 hover:bg-gray-700 transition-colors cursor-default"
+                  className="px-3 py-1 bg-gray-800 rounded-md border border-gray-700 hover:bg-gray-700 transition-colors cursor-pointer"
                   style={{
                     whiteSpace: "nowrap",
                     userSelect: "none",
                   }}
-                  onClick={() => {
-                    termclick(term);
-                  }}
+                  onClick={() => handleTermClick(term)}
                 >
                   {term}
                 </div>
